@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class ChatEventListenerClass implements Listener{
 
-    public ChatEventListenerClass(Map<String, String> ngwordsmap) { //IntellJに言われるまま作ったクラス。なにこれ
+    public ChatEventListenerClass(Map<String, String> ngwordsmap) { //IntellJに言われるまま作ったもの。なにこれ
     }
 
     @EventHandler
