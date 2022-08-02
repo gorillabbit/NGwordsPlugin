@@ -21,7 +21,7 @@ public final class NGwordsPlugin extends JavaPlugin {
         Map<String, String> ngwordsmap = null;
         // Plugin startup logic
         Path path = Paths.get("test.csv");
-        try {
+        try { //csvを読み込んでmapを作り、それをもとにChatEventListnerClassでテキストと一致してるか確かめたい。
             List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
             ngwordsmap = lines.stream().collect(Collectors.toMap(
                     s -> s.split(",")[0],
@@ -30,10 +30,10 @@ public final class NGwordsPlugin extends JavaPlugin {
             Bukkit.broadcastMessage(String.valueOf(ex));
         }
         plugin = this;
-        Bukkit.getServer().getPluginManager().registerEvents(new ChatEventListenerClass(ngwordsmap), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new ChatEventListenerClass(ngwordsmap), this); //どこに変数を渡せばええんや
     }
 
-    public static NGwordsPlugin getPlugin() {
+    public static NGwordsPlugin getPlugin() { //ここにはどんな意味があるんだろうか？
         return plugin;
     }
 
