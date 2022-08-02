@@ -1,0 +1,4 @@
+name: NGwordsPlugin
+version: '${project.version}'
+main: com.gorillabit.ngwordsplugin.NGwordsPlugin
+api-version: 1.16
